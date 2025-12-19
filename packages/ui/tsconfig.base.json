@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Ui Base",
+  "compilerOptions": {
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+
+    /* Bundler mode */
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  }
+}

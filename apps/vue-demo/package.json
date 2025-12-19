@@ -1,0 +1,28 @@
+{
+  "name": "vue-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run app:dev --filter=vue-demo",
+    "build": "turbo run app:build --filter=vue-demo",
+    "preview": "vite preview",
+    "app:dev": "vite",
+    "app:build": "vue-tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "ui-kit": "workspace:*",
+    "vue": "3.5.26"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "6.0.3",
+    "@vue/tsconfig": "0.8.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.0",
+    "vue-tsc": "3.1.8"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,vue}": "eslint --fix",
+    "*.{vue,css,scss}": "stylelint --fix"
+  }
+}

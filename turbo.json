@@ -1,0 +1,22 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "app:dev": {
+      "persistent": true,
+      "dependsOn": ["package:dev"]
+    },
+    "app:build": {
+      "outputs": ["dist/**", ".output/**"],
+      "dependsOn": ["package:build"]
+    },
+    "package:dev": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["^package:dev"]
+    },
+    "package:build": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["^package:build"]
+    }
+  }
+}

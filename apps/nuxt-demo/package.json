@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run app:dev --filter=nuxt-demo",
+    "build": "turbo run app:build --filter=nuxt-demo",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "start": "node tools/server-https",
+    "postinstall": "nuxt prepare",
+    "app:dev": "nuxt dev",
+    "app:build": "nuxt build"
+  },
+  "dependencies": {
+    "nuxt": "4.2.2",
+    "ui-kit": "workspace:*",
+    "vue": "3.5.26",
+    "vue-router": "4.6.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,vue}": "eslint --fix",
+    "*.{vue,css,scss}": "stylelint --fix"
+  }
+}
